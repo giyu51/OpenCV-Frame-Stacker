@@ -205,5 +205,6 @@ We would like to express our gratitude to the following projects for their contr
 
 - [NumPy](https://numpy.org/): The NumPy library for providing efficient array manipulation and mathematical operations, which greatly enhances the functionality of the image stacking process. 🌟
 
+- [Prettier](https://prettier.io/): Prettier, a code formatter that helps maintain consistent code style and readability. 🌟
 
 Their dedication and efforts in developing these open-source projects have greatly benefited the development community.
