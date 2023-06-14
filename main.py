@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-def stackFrames(stack_shape: tuple, frames: list | np.ndarray, dtype):
+def stackFrames(stack_shape: tuple, frames: list | np.ndarray, dtype= np.uint8):
     """
     Stack multiple frames into a single canvas.
 
@@ -10,7 +10,7 @@ def stackFrames(stack_shape: tuple, frames: list | np.ndarray, dtype):
 
     :param stack_shape: A tuple specifying the desired shape of the stacked canvas (number of rows, number of columns).
     :param frames: A list of numpy arrays, where each element represents a frame to be stacked. Each frame should be a numpy ndarray.
-    :param dtype: The data type for the canvas.
+    :param dtype: The data type for the canvas. Default is np.uint8
 
     :return: The stacked canvas as a numpy ndarray.
 

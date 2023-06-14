@@ -87,7 +87,7 @@ image2 = cv2.imread("path/to/image2.png")
 image3 = cv2.imread("path/to/image3.png")
 
 # Stack the frames
-result = stackFrames(stack_shape=(2, 2), dtype=np.uint8, frames=[image1, image2, image3])
+result = stackFrames(stack_shape=(2, 2), frames=[image1, image2, image3])
 
 # Display or save the stacked image
 cv2.imshow("Stacked Image", result)
@@ -107,7 +107,7 @@ The general Stack (e.g., shape = (3,4) ) looks like:
 **Example 1**: _Stack shape_ = (3,1), _Images_ = 3 (COLORFUL)
 
 ```shell
-stackFrames(stack_shape=(3, 1), frames=[image_1, image_2, image_3], dtype=np.uint8 )
+stackFrames(stack_shape=(3, 1), frames=[image_1, image_2, image_3])
 ```
 
 <img src="./images/example_1.png" alt="Example 1">
@@ -117,7 +117,7 @@ stackFrames(stack_shape=(3, 1), frames=[image_1, image_2, image_3], dtype=np.uin
 **Example 2**: _Stack shape_ = (3,2), _Images_ = 6 (COLORFUL)
 
 ```shell
-stackFrames(stack_shape=(3, 2), frames=[image_1, image_2, image_3, image_4, image_5, image_6], dtype=np.uint8 )
+stackFrames(stack_shape=(3, 2), frames=[image_1, image_2, image_3, image_4, image_5, image_6])
 ```
 
 <img src="./images/example_2.png" alt="Example 2">
@@ -127,7 +127,7 @@ stackFrames(stack_shape=(3, 2), frames=[image_1, image_2, image_3, image_4, imag
 **Example 3**: _Stack shape_ = (5,2), _Images_ = 4 (COLORFUL)
 
 ```shell
-stackFrames(stack_shape=(5, 2), frames=[image_1, image_2, image_3, image_4], dtype=np.uint8 )
+stackFrames(stack_shape=(5, 2), frames=[image_1, image_2, image_3, image_4])
 ```
 
 <img src="./images/example_3.png" alt="Example 3">
@@ -137,7 +137,7 @@ stackFrames(stack_shape=(5, 2), frames=[image_1, image_2, image_3, image_4], dty
 **Example 4**: _Stack shape_ = (2,3), _Images_ = 3 (GRAYSCALE)
 
 ```shell
-stackFrames(stack_shape=(2, 3), frames=[image_1, image_2, image_3], dtype=np.uint8 )
+stackFrames(stack_shape=(2, 3), frames=[image_1, image_2, image_3])
 ```
 
 <img src="./images/example_4.png" alt="Example 4">
@@ -147,7 +147,7 @@ stackFrames(stack_shape=(2, 3), frames=[image_1, image_2, image_3], dtype=np.uin
 **Example 5**: _Stack shape_ = (3, 4), _Images_ = 5 (Both GRAYSCALE and COLORFUL)
 
 ```shell
-stackFrames(stack_shape=(3, 4), frames=[image_1, image_2, image_3, image_4, image_5], dtype=np.uint8 )
+stackFrames(stack_shape=(3, 4), frames=[image_1, image_2, image_3, image_4, image_5])
 ```
 
 <img src="./images/example_5.png" alt="Example 5">
@@ -158,7 +158,7 @@ stackFrames(stack_shape=(3, 4), frames=[image_1, image_2, image_3, image_4, imag
 **Example 6**: _Stack shape_ = (2, 2), _Images_ = 5 **ERROR** :stop_sign:
 
 ```shell
-stackFrames(stack_shape=(2, 2), frames=[image_1, image_2, image_3, image_4, image_5], dtype=np.uint8 )
+stackFrames(stack_shape=(2, 2), frames=[image_1, image_2, image_3, image_4, image_5])
 ```
 
 Outputs **error** :stop_sign::
@@ -175,8 +175,8 @@ The `stackFrames` function is used to stack multiple images into a single compos
 #### Function Parameters
 
 - `stack_shape` (tuple): A tuple specifying the desired shape of the image stack in terms of the number of rows and columns.
-- `dtype`: The data type of the output image. It determines the range and precision of pixel values.
 - `frames` (list | np.ndarray): A list of numpy arrays or a numpy array containing the input images to be stacked. Each element in the list or array represents an image.
+- `dtype`: The data type of the output image. It determines the range and precision of pixel values. Defaults to `np.uint8`
 
 #### Function Workflow
 
