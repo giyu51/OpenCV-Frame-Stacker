@@ -44,7 +44,7 @@ pip install numpy opencv-python
 ```
 
 ## :hammer_and_wrench: Usage
-
+### ⚠️ Consider the mutability of lists in Python before using this snippet. ⚠️
 If you want to download the code and use it in your project, you have two options:
 
 **Option 1**: Copy the code from **[main.py](./main.py)**:
