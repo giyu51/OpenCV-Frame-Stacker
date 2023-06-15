@@ -1,6 +1,6 @@
 # 🖼️ OpenCV-Frame-Stacker
 
-The OpenCV-Frame-Stacker is a Python library that allows you to stack multiple images or frames using the Numpy library. It provides a convenient way to arrange and combine images into a single canvas. 📸
+The OpenCV-Frame-Stacker is a Python snippet that allows you to stack multiple images or frames using the Numpy library. It provides a convenient way to arrange and combine images into a single canvas. 📸
 
 ## :sparkles: Features
 
