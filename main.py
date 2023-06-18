@@ -116,36 +116,4 @@ def stackFrames(stack_shape: tuple, frames: list | np.ndarray, dtype= np.uint8):
 
     print(f'Output Image: {canvas.shape[:2][::-1]+(canvas.shape[2],)}\n')
     return canvas
-
-
-# Example usage:
-
-# Load and resize the images
-image = cv2.imread("images/giyu.png", cv2.IMREAD_GRAYSCALE)
-image = cv2.resize(image, (0, 0), fx=0.5, fy=0.5)
-print(f"\nInput Image: {image.shape[1]}x{image.shape[0]}")
-
-image2 = cv2.imread("images/tanjiro.png",  cv2.IMREAD_GRAYSCALE)
-image2 = cv2.resize(image2, image.shape[:2][::-1])
-
-image3 = cv2.imread("images/sabito.png")
-image3 = cv2.resize(image3, image.shape[:2][::-1])
-
-image5 = cv2.imread("images/shinobu.png", cv2.IMREAD_GRAYSCALE)
-image5 = cv2.resize(image5, image.shape[:2][::-1])
-
-image4 = cv2.imread("images/tokito.jpg")
-image4 = cv2.resize(image4, image.shape[:2][::-1])
-
-image6 = cv2.imread("images/kanao.jpg", cv2.IMREAD_GRAYSCALE)
-image6 = cv2.resize(image6, image.shape[:2][::-1])
-
-# Stack the frames
-background = stackFrames(stack_shape=(3, 4), frames=[
-    image, image2, image3, image4, image5], dtype=np.uint8)
-
-# Display and save the resulting image
-cv2.imshow('justTest1', background)
-cv2.waitKey(5000)
-cv2.imwrite("example_5.png", background, [cv2.IMWRITE_PNG_COMPRESSION, 9])
-cv2.destroyAllWindows()
+    
